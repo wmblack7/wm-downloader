@@ -2,189 +2,28 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WM Downloader • Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM Downloader</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            background: #080002;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            position: relative;
-            padding: 20px;
-        }
-
-        .bg-glow {
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 0, 50, 0.25) 0%, rgba(8, 0, 2, 0) 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            pointer-events: none;
-            animation: pulseBg 6s ease-in-out infinite alternate;
-        }
-
-        @keyframes pulseBg {
-            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
-            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-        }
-
-        .card {
-            position: relative;
-            z-index: 10;
-            background: rgba(15, 10, 12, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 0, 50, 0.4);
-            border-radius: 20px;
-            padding: 30px 22px;
-            width: 100%;
-            max-width: 380px;
-            margin: auto;
-            text-align: center;
-            box-shadow: 0 0 35px rgba(255, 0, 50, 0.25), 0 20px 50px rgba(0, 0, 0, 0.95);
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 900;
-            color: #ffffff;
-            letter-spacing: 1.5px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        h1 span {
-            color: #ff1a40;
-            text-shadow: 0 0 15px rgba(255, 26, 64, 0.8);
-        }
-
-        p.sub {
-            font-size: 11px;
-            color: #a1a1aa;
-            margin-bottom: 22px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .input-box, .select-box {
-            margin-bottom: 18px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            font-size: 11px;
-            color: #ff1a40;
-            margin-bottom: 6px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        input[type="text"], select {
-            width: 100%;
-            padding: 12px 14px;
-            background: #090708;
-            border: 2px solid #271c1e;
-            border-radius: 10px;
-            color: #ffffff;
-            font-size: 14px;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        input[type="text"]:focus, select:focus {
-            border-color: #ff1a40;
-            box-shadow: 0 0 12px rgba(255, 26, 64, 0.4);
-            background: #120a0c;
-        }
-
-        select { cursor: pointer; }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background: #000000;
-            border: 2px solid #ff1a40;
-            border-radius: 10px;
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 14px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 26, 64, 0.6);
-            margin-top: 5px;
-        }
-
-        button:hover {
-            background: #ff1a40;
-            color: #000000;
-            transform: translateY(-2px);
-            box-shadow: 0 0 35px rgba(255, 26, 64, 0.95);
-        }
-
-        .credits {
-            margin-top: 20px;
-            font-size: 11px;
-            color: #71717a;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 12px;
-        }
-
-        .credits span {
-            color: #ff1a40;
-            font-weight: bold;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .container { background: #1a0000; border: 2px solid #ff1a1a; border-radius: 12px; padding: 30px; width: 100%; max-width: 450px; box-shadow: 0 8px 25px rgba(255, 26, 26, 0.4); text-align: center; }
+        h1 { color: #ff3333; margin-bottom: 10px; font-size: 24px; }
+        .divider { width: 100%; height: 2px; background-color: #ffffff; margin: 15px 0 25px 0; border-radius: 2px; opacity: 0.8; }
+        input[type="text"] { width: 100%; padding: 12px; margin-bottom: 15px; background: #260000; border: 1px solid #ff4d4d; border-radius: 6px; color: #fff; font-size: 16px; outline: none; }
+        input[type="text"]::placeholder { color: #ff9999; }
+        button { width: 100%; padding: 12px; background: #cc0000; border: none; border-radius: 6px; color: white; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #ff1a1a; }
     </style>
 </head>
 <body>
-    <div class="bg-glow"></div>
-
-    <div class="card">
-        <h1>WM <span>Downloader</span></h1>
-        <p class="sub">Sistema de Extração Profissional</p>
-
-        <form action="/download" method="POST">
-            <div class="input-box">
-                <label>Link do Vídeo</label>
-                <input type="text" name="url" placeholder="Cole o link aqui..." required autocomplete="off">
-            </div>
-
-            <div class="select-box">
-                <label>Qualidade de Extração</label>
-                <select name="format">
-                    <option value="alta_resolucao">Baixar em alta resolução</option>
-                    <option value="mp3">Baixar em MP3</option>
-                    <option value="resolucao_original">Baixar em resolução original</option>
-                </select>
-            </div>
-
-            <button type="submit">Baixar Conteúdo</button>
+    <div class="container">
+        <h1>WM Downloader</h1>
+        <div class="divider"></div>
+        <form method="POST">
+            <input type="text" name="url" placeholder="Cole o link aqui..." required>
+            <button type="submit">Baixar</button>
         </form>
-
-        <div class="credits">Criado por <span>WM</span> • Todos os direitos reservados</div>
     </div>
 </body>
 </html>
-
