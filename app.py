@@ -1,4 +1,6 @@
-import os
+git add .
+git commit -m "Atualizar caminhos do Flask"
+git pushimport os
 from flask import Flask, render_template, request, send_file
 import yt_dlp
 
